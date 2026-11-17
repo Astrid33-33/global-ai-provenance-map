@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A research tracker for rules on AI-generated content provenance, disclosure, and detection across text, image, audio, and video.">
+  <meta name="theme-color" content="#ffffff">
+  <title>AI Provenance Atlas — Global Policy Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top"><span>AI Content Provenance</span></a>
+    <nav aria-label="Main navigation"><a href="#map">Explore the map</a><a href="#matrix">Compare requirements</a><a href="#standards">Technical standards</a><a href="#sources">Sources</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="intro" id="top">
+      <div class="intro-copy"><h1>AI-generated content<br>provenance rules</h1><p class="intro-deck">A comparative research tracker on rules and guidance for AI-generated content labels, watermarks, and provenance. Legal status and scope are shown for each instrument.</p></div>
+    </section>
+
+    <section class="map-section" id="map">
+      <div class="section-title"><div><h2>Legislation, regulation and adoption</h2></div><p class="section-aside">Start with the current legal landscape, then compare it with reported AI use. Select a country to open its policy profile.</p></div>
+      <div class="map-tabs" role="tablist" aria-label="Map view">
+        <button type="button" role="tab" aria-selected="true" class="map-tab active" data-map-view="law">Legislation &amp; regulation</button>
+        <button type="button" role="tab" aria-selected="false" class="map-tab" data-map-view="adoption">AI adoption</button>
+        <button type="button" role="tab" aria-selected="false" class="map-tab" data-map-view="compare">Compare trends</button>
+      </div>
+      <p class="map-view-note" id="map-view-note">Current instruments within this tracker’s scope. Unshaded countries have not been reviewed for this map.</p>
+      <div class="map-grid map-view-grid">
+        <div class="map-stage" id="map-stage" aria-live="polite"></div>
+        <aside class="profile-card" id="detail-panel" aria-live="polite"></aside>
+      </div>
+      <div class="map-source-note" id="map-source-note">Legal status, geographic coverage, and links are shown in each country profile.</div>
+    </section>
+
+    <section class="comparison-section" id="matrix">
+      <div class="section-title"><div><h2>One output, different obligations.</h2></div><p class="section-aside">Machine-readable marking, visible disclosure, and platform detection are separate requirements. A single “watermark” checkbox can obscure those differences.</p></div>
+      <div class="filters"><span>Media type</span><div id="media-filters"></div><button id="reset-filter">Show all</button></div>
+      <div class="table-frame"><div class="matrix-table" id="matrix-table"></div><div class="table-legend"><span><i class="key-required"></i> Explicit requirement</span><span><i class="key-limited"></i> Conditional / limited</span><span><i class="key-none"></i> No general requirement identified</span><small>Summaries are not legal advice.</small></div></div>
+    </section>
+
+    <section class="standards-section" id="standards">
+      <div class="section-title"><div><h2>Technical standards and implementation</h2></div><p class="section-aside">The legal duty and the technical route are not the same thing. This comparison separates mandated outcomes from standards and voluntary implementation guidance.</p></div>
+      <div class="standards-intro"><b>Compare the instruments</b><span>Scope · format · detection · legal force</span></div>
+      <div class="standards-table-wrap"><div class="standards-table" id="standards-table"></div></div>
+      <p class="standards-note"><b>Reading the comparison:</b> China names a mandatory national standard; the EU binds providers to a technology-neutral outcome and offers a voluntary Code of Practice; California sets statutory criteria and detection-tool duties without prescribing one universal watermark format. California’s separate large-platform specifications duty is scheduled for 1 January 2027.</p>
+    </section>
+
+    <section class="provenance-section">
+      <div class="section-title"><div><h2>Three layers of a provenance record.</h2></div><p class="section-aside">A sound review keeps legal obligations, provider claims, and observed files as distinct evidence.</p></div>
+      <div class="evidence-grid"><article><h3>Human-readable disclosure</h3><p>Text labels, visible marks, audio cues, or interface notices that tell an audience content was generated or altered.</p></article><article><h3>Machine-readable provenance</h3><p>Metadata, content credentials, or other technical signals that systems can inspect and use for tracing.</p></article><article><h3>Observed evidence</h3><p>Original output files, metadata inspection, detector results, and screenshots. A policy promise is not a substitute for a file-level check.</p></article></div>
+    </section>
+
+    <aside class="scope-note"><b>Scope note</b><p>This tracker compares binding instruments, non-binding instruments, and draft or proposed instruments within the scope of AI-generated content labels, watermarks, and provenance. Status checked 16 November 2026. Some provisions and implementation details remain unverified; see each profile. This is a research aid, not a legal opinion.</p></aside>
+
+    <section class="sources-section" id="sources"><div class="section-title"><div><h2>Sources</h2></div></div><div id="source-list" class="source-list"></div></section>
+  </main>
+  <footer><a class="wordmark footer-mark" href="#top">AI Content Provenance</a><a href="#top">Back to top ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
